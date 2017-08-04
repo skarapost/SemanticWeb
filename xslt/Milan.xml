@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE team SYSTEM "team1.dtd">
+<?xml-stylesheet type="text/xsl" href="Milan-xsl.xsl"?>
+<team>
+	<clubInformation>A.C. Milan is one of the greatest teams in the world. Milan is well-known for some of the best defenders that ever existed. Some of them are Paolo Maldini, Allessandro Nesta and Costacurta. The latest years Milan has a descending route, but it is a matter of time to rise again. The nickname of Milan is <nickName>rossoneri</nickName>. The club is accomodated in <stadium>San Siro</stadium> which is also the house of the main rival <rival>Inter</rival>. <stadium>San Siro</stadium>'s capacity is aproximately <capacity>80000</capacity>. The most hated Milan's rivals are <rival>Inter</rival>, <rival>Juventus</rival>, <rival>Atalanta</rival> and <rival>Genoa</rival>
+	</clubInformation>
+	<players>
+		<person age="28" telNumber="20000" country="Italy" adress="M.Alexandrou 25">
+			<goalkeeper nickName="Scuffet" number="1" aerial="16" shot-stopping="16" communication="17" physical="16" mental="18" numberOfAppearances="12">Stefano Scuffet</goalkeeper>
+		</person>
+		<person age="26" telNumber="20001" country="Argentina">
+			<goalkeeper nickName="Rojas" number="13" aerial="16" shot-stopping="18" communication="16" physical="15" mental="15" numberOfAppearances="3">Claudio Rojas</goalkeeper>
+		</person>
+		<person age="26" country="Mexico" telNumber="20002" adress="V.Alexandrou 78">
+			<player nickName="Calderon" number="2" position="Right defender" defending="20" mental="18" physical="20" technical="11" attacking="8" numberOfGoals="0" numberOfAssists="0" numberOfAppearances="9" personality="calm">Paolo Calderon</player>
+		</person>
+		<person age="24" country="Portugal" telNumber="20003">
+			<player nickName="Moura" number="26" position="Right defender" defending="14" mental="13" physical="15" technical="12" attacking="9" numberOfGoals="1" numberOfAssists="0" numberOfAppearances="6">Paul Moura</player>
+		</person>
+		<person age="33" country="Germany" telNumber="20004" adress="S.Tsakmani 56">
+			<player nickName="Knoche" number="4" position="Centre defender" defending="20" mental="18" physical="12" technical="12" attacking="8" numberOfGoals="0" numberOfAssists="0" numberOfAppearances="5">Robin Knoche</player>
+		</person>
+		<person age="27" country="Belarus" telNumber="20005">
+			<player nickName="Shkabara" number="5" position="Centre defender" defending="20" mental="16" physical="14" technical="11" attacking="9" numberOfGoals="1" numberOfAssists="1" numberOfAppearances="10" personality="fairly sporting">Stanislav Shkabara</player>
+		</person>
+		<person age="21" country="Turkey" telNumber="20006">
+			<player nickName="Sengun" number="17" position="Centre defender" defending="16" mental="13" physical="15" technical="11" attacking="8" numberOfGoals="1" numberOfAssists="0" numberOfAppearances="9">Ilkay Sengun</player>
+		</person>
+		<person age="23" country="Italy" telNumber="20006" adress="K.Gosiou 32">
+			<player nickName="Borelli" number="22" position="Centre defender" defending="20" mental="18" physical="19" technical="5" attacking="4" numberOfGoals="1" numberOfAssists="0" numberOfAppearances="11" personality="calm">Alesio Borelli</player>
+		</person>
+		<person age="25" country="Italy" telNumber="20007">
+			<player nickName="Maialetti" number="3" position="Left defender" defending="16" mental="15" physical="15" technical="12" attacking="13" numberOfGoals="0" numberOfAssists="1" numberOfAppearances="11">Ignacio Maialetti</player>
+		</person>
+		<person age="17" country="Italy" telNumber="20008">
+			<player nickName="Carboni" number="58" position="Left defender" defending="13" mental="11" physical="14" technical="11" attacking="11" numberOfGoals="0" numberOfAssists="1" numberOfAppearances="6">Stefano Carboni</player>
+		</person>
+		<person age="20" country="Germany" telNumber="20009">
+			<player nickName="No" number="6" position="Defensive Midfielder" defending="20" mental="15" physical="19" technical="10" attacking="8" numberOfGoals="0" numberOfAssists="1" numberOfAppearances="9">Inigo No</player>
+		</person>
+		<person age="33" country="Kenya" telNumber="20010" adress="C.Smyrnis 74">
+			<player nickName="Waynama" number="19" position="Defensive Midfielder" defending="17" mental="16" physical="16" technical="12" attacking="12" numberOfGoals="0" numberOfAssists="2" numberOfAppearances="5" personality="fairly determined">Victor Waynama</player>
+		</person>
+		<person age="30" country="Italy" telNumber="20011">
+			<player nickName="Sturaro" number="8" position="Centre midfielder" defending="14" mental="14" physical="13" technical="12" attacking="12" numberOfGoals="0" numberOfAssists="1" numberOfAppearances="11">Stefano Sturaro</player>
+		</person>
+		<person age="24" country="Argentina" telNumber="20012">
+			<player nickName="Barlatay" number="24" position="Centre midfielder" defending="15" mental="14" physical="18" technical="17" attacking="14" numberOfGoals="1" numberOfAssists="2" numberOfAppearances="8" personality="ambitious">Jorge Barlatay</player>
+		</person>
+		<person age="28" country="Argentina" telNumber="20013" adress="G.Lampraki 55">
+			<player nickName="Cubas" number="10" position="Centre midfielder" defending="13" mental="18" physical="13" technical="17" attacking="14" numberOfGoals="0" numberOfAssists="2" numberOfAppearances="10">Andreas Cubas</player>
+		</person>
+		<person age="26" country="Italy" telNumber="20014">
+			<player nickName="Francini" number="8" position="Centre midfielder" defending="13" mental="14" physical="14" technical="15" attacking="13" numberOfGoals="0" numberOfAssists="0" numberOfAppearances="3" personality="calm">Walter Francini</player>
+		</person>
+		<person age="19" country="Holland" telNumber="20015" adress="C.Rova 19">
+			<player nickName="Lagendijk" number="18" position="Centre midfielder" defending="9" mental="13" physical="15" technical="15" attacking="14" numberOfGoals="3" numberOfAssists="1" numberOfAppearances="15" personality="ambitious">Martin Lagendijk</player>
+		</person>
+		<person age="25" country="Holland" telNumber="20016">
+			<player nickName="Kloestra" number="11" position="Left attacking midfielder " defending="5" mental="16" physical="18" technical="20" attacking="16" numberOfGoals="4" numberOfAssists="8" numberOfAppearances="12">Berry Kloestra</player>
+		</person>
+		<person age="28" country="Scotland" telNumber="20017">
+			<player nickName="Gauld" number="14" position="Left attacking midfielder" defending="5" mental="18" physical="15" technical="18" attacking="14" numberOfGoals="1" numberOfAssists="3" numberOfAppearances="6" personality="professional">Ryan Gauld</player>
+		</person>
+		<person age="24" country="Italy" telNumber="20018" adress="G.Kopa 73">
+			<player nickName="Falcone" number="9" position="Striker" defending="4" mental="14" physical="18" technical="15" attacking="18" numberOfGoals="11" numberOfAssists="3" numberOfAppearances="11">Mario Falcone</player>
+		</person>
+		<person age="31" country="England" telNumber="20019">
+			<player nickName="Kane" number="20" position="Striker" defending="6" mental="16" physical="14" technical="16" attacking="17" numberOfGoals="3" numberOfAssists="1" numberOfAppearances="7">Harry Kane</player>
+		</person>
+		<person age="23" country="Croatia" telNumber="20020">
+			<player nickName="Mandic" number="16" position="Right attacking midfielder" defending="8" mental="15" physical="17" technical="17" attacking="15" numberOfGoals="3" numberOfAssists="1" numberOfAppearances="10" personality="aggresive">Nicola Mandic</player>
+		</person>
+		<person age="24" country="Scotland" telNumber="20021" adress="W.Tsakrezi 78">
+			<player nickName="Sleight" number="7" position="Right attacking midfielder" defending="13" mental="12" physical="20" technical="17" attacking="16" numberOfGoals="4" numberOfAssists="4" numberOfAppearances="10">Andrew Sleight</player>
+		</person>
+	</players>
+	<staff>
+		<person age="46" country="Italy" telNumber="20022">
+			<manager manManagement="16" personality="calm" favouritePlayersOfTeam="Kloestra Cubas Francini" favouriteTacticsFormation="4-3-3" tacticsKnowledge="medium">Vicenzo Montella</manager>
+		</person>
+		<person age="50" country="Argentina" telNumber="20023">
+			<coach strongDomain="tactics" determination="12" motivation="15" discipline="17" personality="calm">Sergio Macron</coach>
+		</person>
+		<person age="25" country="Italy" telNumber="20024">
+			<coach strongDomain="attack" determination="17" motivation="8" discipline="12">Nicola Mateucci</coach>
+		</person>
+		<person age="42" country="Italy" telNumber="20025">
+			<coach strongDomain="defence" determination="15" motivation="19" discipline="14" personality="volatile">Simone Montanaro</coach>
+		</person>
+		<person age="53" country="Italy" telNumber="20026">
+			<coach strongDomain="technique" determination="14" motivation="18" discipline="12" personality="resilient">Claudio Rivalta</coach>
+		</person>
+		<person age="38" country="France" telNumber="20027" adress="G.Armani 80">
+			<coach strongDomain="physical" determination="12" motivation="19" discipline="18">Jeremy Toulalan</coach>
+		</person>
+		<person age="36" country="Italy" telNumber="20028">
+			<physiotherapist motivation="10" physiotherapy="15" personality="fairly professional">Stefano Mazzoni</physiotherapist>
+		</person>
+		<person age="52" country="England" telNumber="20029">
+			<physiotherapist motivation="16" physiotherapy="19">John Thomas</physiotherapist>
+		</person>
+		<person age="45" telNumber="20030" country="Belgium" adress="Z.Turbet">
+			<physiotherapist motivation="20" physiotherapy="20">Eden Maaschelchik</physiotherapist>
+		</person>
+		<person age="64" telNumber="20031" country="Italy" adress="C.Kupler">
+			<physiotherapist motivation="15" physiotherapy="18" personality="fairly calm">Demetrio Albertini</physiotherapist>
+		</person>
+		<person age="45" country="Italy" telNumber="20032">
+			<scouter bestKnowledge="South Europe" potentialStateScouting="17" nowStateScouting="20">Silvio Broli</scouter>
+		</person>
+		<person age="39" country="Italy" telNumber="20033">
+			<scouter bestKnowledge="United Kingdom and Ireland" potentialStateScouting="19" nowStateScouting="19" personality="resilient">Angelo Carbone</scouter>
+		</person>
+		<person age="36" country="Italy" telNumber="20034" adress="W.Tistre 1">
+			<scouter bestKnowledge="Central Europe" potentialStateScouting="18" nowStateScouting="18" personality="fairly professional">Mauro Bianchessi</scouter>
+		</person>
+		<person age="52" country="Serbia" telNumber="20035">
+			<scouter bestKnowledge="Eastern Europe" potentialStateScouting="19" nowStateScouting="18">Banislav Djordjevic</scouter>
+		</person>
+	</staff>
+	<statistics>
+		<firstScorer goals="11">Mario Falcone</firstScorer>
+		<firstAssistant assists="8">Berry Kloestra</firstAssistant>
+		<firstAppearances appearances="12">Stefano Scuffet</firstAppearances>
+		<firstSales name="Kloestra" numberOfSales="300000">Berry Kloestra</firstSales>
+	</statistics>
+</team>

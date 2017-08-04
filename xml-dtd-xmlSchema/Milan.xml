@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE team SYSTEM "team.dtd">
+<team>
+	<clubInformation>A.C. Milan is one of the greatest teams in the world. Milan is well-known for some of the best defenders that ever existed. Some of them are Paolo Maldini, Allessandro Nesta and Costacurta. The latest years Milan has a descending route, but it is a matter of time to rise again. The nickname of Milan is <nickName>rossoneri</nickName>. The club is accomodated in <stadium>San Siro</stadium> which is also the house of the main rival <rival>Inter</rival>. <stadium>San Siro</stadium>'s capacity is aproximately <capacity>80000</capacity>. The most hated Milan's rivals are <rival>Inter</rival>, <rival>Juventus</rival>, <rival>Atalanta</rival> and <rival>Genoa</rival>
+	</clubInformation>
+	<players>
+		<goalkeeper nickName="Scuffet" age="28" number="1" aerial="16" shot-stopping="16" communication="17" physical="16" mental="18" numberOfAppearances="12">Stefano Scuffet</goalkeeper>
+		<goalkeeper nickName="Rojas" age="26" number="13" aerial="16" shot-stopping="18" communication="16" physical="15" mental="15" numberOfAppearances="3">Claudio Rojas</goalkeeper>
+		<player nickName="Calderon" age="26" number="2" position="Right defender" defending="20" mental="18" physical="20" technical="11" attacking="8" numberOfGoals="0" numberOfAssists="0" numberOfAppearances="9" personality="calm">Paolo Calderon</player>
+		<player nickName="Moura" age="24" number="26" position="Right defender" defending="14" mental="13" physical="15" technical="12" attacking="9" numberOfGoals="1" numberOfAssists="0" numberOfAppearances="6">Paul Moura</player>
+		<player nickName="Knoche" age="33" number="4" position="Centre defender" defending="20" mental="18" physical="12" technical="12" attacking="8" numberOfGoals="0" numberOfAssists="0" numberOfAppearances="5">Robin Knoche</player>
+		<player nickName="Shkabara" age="27" number="5" position="Centre defender" defending="20" mental="16" physical="14" technical="11" attacking="9" numberOfGoals="1" numberOfAssists="1" numberOfAppearances="10" personality="fairly sporting">Stanislav Shkabara</player>
+		<player nickName="Sengun" age="21" number="17" position="Centre defender" defending="16" mental="13" physical="15" technical="11" attacking="8" numberOfGoals="1" numberOfAssists="0" numberOfAppearances="9">Ilkay Sengun</player>
+		<player nickName="Borelli" age="23" number="22" position="Centre defender" defending="20" mental="18" physical="19" technical="5" attacking="4" numberOfGoals="1" numberOfAssists="0" numberOfAppearances="11" personality="calm">Alesio Borelli</player>
+		<player nickName="Maialetti" age="25" number="3" position="Left defender" defending="16" mental="15" physical="15" technical="12" attacking="13" numberOfGoals="0" numberOfAssists="1" numberOfAppearances="11">Ignacio Maialetti</player>
+		<player nickName="Carboni" age="17" number="58" position="Left defender" defending="13" mental="11" physical="14" technical="11" attacking="11" numberOfGoals="0" numberOfAssists="1" numberOfAppearances="6">Stefano Carboni</player>
+		<player nickName="No" age="21" number="6" position="Defensive Midfielder" defending="20" mental="15" physical="19" technical="10" attacking="8" numberOfGoals="0" numberOfAssists="1" numberOfAppearances="9">Inigo No</player>
+		<player nickName="Waynama" age="33" number="19" position="Defensive Midfielder" defending="17" mental="16" physical="16" technical="12" attacking="12" numberOfGoals="0" numberOfAssists="2" numberOfAppearances="5" personality="fairly determined">Victor Waynama</player>
+		<player nickName="Sturaro" age="30" number="8" position="Centre midfielder" defending="14" mental="14" physical="13" technical="12" attacking="12" numberOfGoals="0" numberOfAssists="1" numberOfAppearances="11">Stefano Sturaro</player>
+		<player nickName="Barlatay" age="24" number="24" position="Centre midfielder" defending="15" mental="14" physical="18" technical="17" attacking="14" numberOfGoals="1" numberOfAssists="2" numberOfAppearances="8" personality="ambitious">Jorge Barlatay</player>
+		<player nickName="Cubas" age="28" number="10" position="Centre midfielder" defending="18" mental="18" physical="13" technical="17" attacking="14" numberOfGoals="0" numberOfAssists="2" numberOfAppearances="10">Andreas Cubas</player>
+		<player nickName="Francini" age="26" number="8" position="Centre midfielder" defending="13" mental="14" physical="14" technical="15" attacking="13" numberOfGoals="0" numberOfAssists="0" numberOfAppearances="3" personality="calm">Walter Francini</player>
+		<player nickName="Lagendijk" age="19" number="18" position="Centre midfielder" defending="9" mental="13" physical="15" technical="15" attacking="14" numberOfGoals="3" numberOfAssists="1" numberOfAppearances="15" personality="ambitious">Martin Lagendijk</player>
+		<player nickName="Kloestra" age="25" number="11" position="Left attacking midfielder " defending="5" mental="16" physical="18" technical="20" attacking="16" numberOfGoals="4" numberOfAssists="8" numberOfAppearances="12">Berry Kloestra</player>
+		<player nickName="Gauld" age="28" number="14" position="Left attacking midfielder" defending="5" mental="18" physical="15" technical="18" attacking="14" numberOfGoals="1" numberOfAssists="3" numberOfAppearances="6">Ryan Gauld</player>
+		<player nickName="Falcone" age="24" number="9" position="Striker" defending="4" mental="14" physical="18" technical="15" attacking="18" numberOfGoals="11" numberOfAssists="3" numberOfAppearances="11">Mario Falcone</player>
+		<player nickName="Kane" age="31" number="20" position="Striker" defending="6" mental="16" physical="14" technical="16" attacking="17" numberOfGoals="3" numberOfAssists="1" numberOfAppearances="7">Harry Kane</player>
+		<player nickName="Mandic" age="23" number="16" position="Right attacking midfielder" defending="8" mental="15" physical="17" technical="17" attacking="15" numberOfGoals="3" numberOfAssists="1" numberOfAppearances="10">Nicola Mandic</player>
+		<player nickName="Sleight" age="24" number="7" position="Right attacking midfielder" defending="13" mental="12" physical="20" technical="17" attacking="16" numberOfGoals="4" numberOfAssists="4" numberOfAppearances="10">Andrew Sleight</player>
+	</players>
+	<staff>
+		<manager age="46" manManagement="16" personality="calm" favouritePlayersOfTeam="Kloestra Cubas Francini" favouriteTacticsFormation="4-3-3" tacticsKnowledge="medium">Vicenzo Montella</manager>
+		<coach age="50" strongDomain="tactics" determination="12" motivation="15" discipline="17" personality="calm">Sergio Macron</coach>
+		<coach age="25" strongDomain="attack" determination="17" motivation="8" discipline="12">Nicola Mateucci</coach>
+		<coach age="42" strongDomain="defence" determination="15" motivation="19" discipline="14" personality="volatile">Simone Montanaro</coach>
+		<coach age="53" strongDomain="technique" determination="14" motivation="18" discipline="12" personality="resilient">Claudio Rivalta</coach>
+		<coach age="48" strongDomain="physical" determination="12" motivation="19" discipline="18">Jeremy Toulalan</coach>
+		<physiotherapist age="36" motivation="10" physiotherapy="15" personality="fairly professional">Stefano Mazzoni</physiotherapist>
+		<physiotherapist age="52" motivation="16" physiotherapy="19">John Thomas</physiotherapist>
+		<scouter age="45" bestKnowledge="South Europe" potentialStateScouting="17" nowStateScouting="20">Silvio Broli</scouter>
+		<scouter age="39" bestKnowledge="United Kingdom and Ireland" potentialStateScouting="19" nowStateScouting="19" personality="resilient">Angelo Carbone</scouter>
+		<scouter age="36" bestKnowledge="Central Europe" potentialStateScouting="18" nowStateScouting="18" personality="fairly professional">Mauro Bianchessi</scouter>
+		<scouter age="52" bestKnowledge="Eastern Europe" potentialStateScouting="19" nowStateScouting="18">Banislav Djordjevic</scouter>
+	</staff>
+	<statistics>
+		<firstScorer goals="11">Mario Falcone</firstScorer>
+		<firstAssistant assists="8">Berry Kloestra</firstAssistant>
+		<firstAppearances appearances="12">Stefano Scuffet</firstAppearances>
+		<firstSales name="Kloestra" numberOfSales="300000">Berry Kloestra</firstSales>
+	</statistics>
+</team>

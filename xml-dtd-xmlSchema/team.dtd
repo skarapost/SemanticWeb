@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT team (clubInformation, players?, staff?, statistics?)>
+<!ELEMENT clubInformation (#PCDATA | stadium | capacity | nickName | colour | rival)*>
+<!ELEMENT stadium (#PCDATA)>
+<!ELEMENT capacity (#PCDATA)>
+<!ELEMENT nickName (#PCDATA)>
+<!ELEMENT colour (#PCDATA)>
+<!ELEMENT rival (#PCDATA)>
+<!ELEMENT players (goalkeeper+, player+)>
+<!ELEMENT goalkeeper (#PCDATA)>
+<!ATTLIST goalkeeper
+	nickName ID #REQUIRED
+	age CDATA #REQUIRED
+	number (1 | 13 | 25) #REQUIRED
+	aerial (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	shot-stopping (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	communication (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	physical (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	mental (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	personality CDATA #IMPLIED
+	numberOfAppearances CDATA #REQUIRED
+>
+<!ELEMENT player (#PCDATA)>
+<!ATTLIST player
+	nickName ID #REQUIRED
+	age CDATA #REQUIRED
+	number CDATA #REQUIRED
+	position CDATA #REQUIRED
+	defending (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	mental (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	physical (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	technical (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	attacking (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	personality CDATA #IMPLIED
+	numberOfGoals CDATA #REQUIRED
+	numberOfAssists CDATA #REQUIRED
+	numberOfAppearances CDATA #REQUIRED
+>
+<!ELEMENT staff (manager, coach*, physiotherapist*, scouter*)>
+<!ELEMENT manager (#PCDATA)>
+<!ATTLIST manager
+	age CDATA #REQUIRED
+	personality CDATA #IMPLIED
+	manManagement (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	tacticsKnowledge (low | medium | excellent) #REQUIRED
+	favouriteTacticsFormation CDATA #IMPLIED
+	favouritePlayersOfTeam IDREFS #IMPLIED
+	previousTeams CDATA #IMPLIED
+>
+<!ELEMENT coach (#PCDATA)>
+<!ATTLIST coach
+	age CDATA #REQUIRED
+	strongDomain (tactics | defence | technique | attack | physical) #REQUIRED
+	personality CDATA #IMPLIED
+	determination (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	motivation (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	discipline (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+>
+<!ELEMENT physiotherapist (#PCDATA)>
+<!ATTLIST physiotherapist
+	age CDATA #REQUIRED
+	personality CDATA #IMPLIED
+	motivation (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	physiotherapy (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+>
+<!ELEMENT scouter (#PCDATA)>
+<!ATTLIST scouter
+	age CDATA #REQUIRED
+	personality CDATA #IMPLIED
+	bestKnowledge CDATA #REQUIRED
+	potentialStateScouting (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+	nowStateScouting (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20) #REQUIRED
+>
+<!ELEMENT statistics (firstScorer*, firstAssistant*, firstAppearances*, firstSales*)>
+<!ELEMENT firstScorer (#PCDATA)>
+<!ATTLIST firstScorer
+	goals CDATA #REQUIRED
+>
+<!ELEMENT firstAssistant (#PCDATA)>
+<!ATTLIST firstAssistant
+	assists CDATA #REQUIRED
+>
+<!ELEMENT firstAppearances (#PCDATA)>
+<!ATTLIST firstAppearances
+	appearances CDATA #REQUIRED
+>
+<!ELEMENT firstSales (#PCDATA)>
+<!ATTLIST firstSales
+	numberOfSales CDATA #IMPLIED
+	name IDREF #REQUIRED
+>

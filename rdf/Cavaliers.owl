@@ -1,0 +1,1466 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:assert="http://www.owl-ontologies.com/assert.owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns="http://www.owl-ontologies.com/Ontology1482757492.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1482757492.owl">
+  <owl:Ontology rdf:about=""/>
+  <rdfs:Class rdf:ID="ClubInformation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Club Information</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This class gives some information about the basketball club.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Under20">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Young squad</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Under20 class describes tha team of young players. Subclass of Squad class.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Squad"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="StaffMember">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Employee"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Person"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >StaffMember represents a member of the staff. Subclass of Employee class.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Staff Member</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#Person">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Person class includes all persons that may exist in the club. It contains players, simple members(fans) of the club, president of the club or a staff member.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Person</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Center">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Center</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Player"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Centrer class represents a center(position in a basketball team) of the team.Subclass of Player class.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Coach">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coach</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#StaffMember"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coach class represents either a trainer or a manager of the team. Subclass of StaffMember class.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Forward">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#Player"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Forward class represents a forward(position in a basketball team) of the club. Subclass of Player class.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Forward</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Member">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Member class represents a simple member(fan) of the team. Subclass of Person class.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Member of the club</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#Player">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Player</rdfs:label>
+    <rdfs:comment xml:lang="en">The player class contains information about a player. It is subclass of Employee class.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="ManagerU20"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#Employee"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Rival">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Rival</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Rival class depicts a rival team to the club.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="ManagerFirstTeam">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ManagerFirstTeam describes a manager that coaches only the first team. Subclass of Manager class.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Manager of the First Team</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Manager"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Guard">
+    <rdfs:subClassOf rdf:resource="#Player"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Guard class represents a guard(position in a team) of the team. Subclass of Player class.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Guard</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#Manager">
+    <rdfs:subClassOf rdf:resource="#Coach"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Manager class represents the manager of the team. Subclass of Coach class.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Manager</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="President">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >President</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Person"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >President class describes the president of the team. Subclass of Person class.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#ManagerU20">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Manager of the young team</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ManagerU20 describes a manager of the under-20 team. Subclass of Manager class.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Manager"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Trainer">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Trainer</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Trainer class depicts a trainer of the team. Trainers are responsible for training a particular domain. For example a trainer's strong domain can be tactics. Subclass of Coach class.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Coach"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#Squad">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Squad class represents the set of teams that comprise a basketball team.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Squad of the team</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Stadium">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;
+      Stadium class represents a stadium of the team. It can be either a 
+      training court, or a playing court.
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Stadium</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Physiotherapist">
+    <rdfs:subClassOf rdf:resource="#StaffMember"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Physiotherapist</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Physiotherapist class depicts a physiotherapist o the team. Subclass of StaffMember class.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="MainSquad">
+    <rdfs:subClassOf rdf:resource="#Squad"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Main squad</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MainSquad class describes the set of the players that has the main team. Subclass of Squad class.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Scouter">
+    <rdfs:subClassOf rdf:resource="#StaffMember"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Scouter</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Scouter class describes a scouter of the team Subclass of StaffMember.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#Employee">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Employee</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Employee class represents an employee in the club.</rdfs:comment>
+  </rdfs:Class>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Collection">
+      <rdfs:Class rdf:about="#Member"/>
+      <rdfs:Class rdf:about="#President"/>
+    </owl:unionOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="playsYoungGuard">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Under20_Guard</rdfs:label>
+    <rdfs:range rdf:resource="#Guard"/>
+    <rdfs:domain rdf:resource="#Squad"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="playsFirstGuard">
+    <rdfs:domain rdf:resource="#Squad"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >First_Team's_Guard</rdfs:label>
+    <rdfs:range rdf:resource="#Guard"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="captainFirst">
+    <rdfs:domain rdf:resource="#MainSquad"/>
+    <rdfs:range rdf:resource="#Player"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Defines the captain of the squad. Here is defined the captain of the main squad.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >First_Team_Captain</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="fcoaches">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="coaches"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#MainSquad"/>
+    <rdfs:domain rdf:resource="#ManagerFirstTeam"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasStadium">
+    <rdfs:domain rdf:resource="#ClubInformation"/>
+    <rdfs:range rdf:resource="#Stadium"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="playsFirstCenter">
+    <rdfs:range rdf:resource="#Center"/>
+    <rdfs:domain rdf:resource="#Squad"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >First_Team's_Center</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="playsYoungForward">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Under20_Forward</rdfs:label>
+    <rdfs:range rdf:resource="#Forward"/>
+    <rdfs:domain rdf:resource="#Squad"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="playsFirstForward">
+    <rdfs:domain rdf:resource="#Squad"/>
+    <rdfs:range rdf:resource="#Forward"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >First_Team's_Forward</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="captainU20">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Under20_Captain</rdfs:label>
+    <rdfs:range rdf:resource="#Player"/>
+    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >captainFirst</rdfs:seeAlso>
+    <rdfs:domain rdf:resource="#Under20"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasYoungInter">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;
+      It is the set of players that participates in their young squad of their 
+      country.
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="hasInternational"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Under20"/>
+    <rdfs:range rdf:resource="#Player"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasInternational">
+    <rdfs:range rdf:resource="#Player"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Contains the set of players that participates in their international squads.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Squad"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasManInternational">
+    <rdfs:range rdf:resource="#Player"/>
+    <rdfs:domain rdf:resource="#MainSquad"/>
+    <rdfs:subPropertyOf rdf:resource="#hasInternational"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;
+      It is the set of players that participate in the main squad of their 
+      nation.
+    &lt;/p&gt;</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#coaches">
+    <rdfs:range rdf:resource="#Squad"/>
+    <rdfs:domain rdf:resource="#Manager"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ycoaches">
+    <rdfs:range rdf:resource="#Under20"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#ManagerU20"/>
+    <rdfs:subPropertyOf rdf:resource="#coaches"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="playsYoungCenter">
+    <rdfs:domain rdf:resource="#Squad"/>
+    <rdfs:range rdf:resource="#Center"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Under20_Center</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="gCommands">
+    <rdfs:domain rdf:resource="#President"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#Member"/>
+          <rdfs:Class rdf:about="#Physiotherapist"/>
+          <rdfs:Class rdf:about="#Scouter"/>
+          <rdfs:Class rdf:about="#Trainer"/>
+          <rdfs:Class rdf:about="#Center"/>
+          <rdfs:Class rdf:about="#Guard"/>
+          <rdfs:Class rdf:about="#Forward"/>
+          <rdfs:Class rdf:about="#ManagerFirstTeam"/>
+          <rdfs:Class rdf:about="#ManagerU20"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="strongDomain">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Trainer"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Defines in which domain of training the coach is better. The domains are tactics, defending, physical, technique.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="managerWaige">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#Manager"/>
+          <rdfs:Class rdf:about="#Player"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:ID="staffWaige"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasName">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Defines the name of the team.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#ClubInformation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="twoPoints">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Player"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="waige">
+    <rdfs:domain rdf:resource="#Employee"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="nowStateAb">
+    <rdfs:domain rdf:resource="#Scouter"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="disciplineAb">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#StaffMember"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="physiotherapyAb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Physiotherapist"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="technicalAb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Coach"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="yearsInTeam">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Employee"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="capacity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Stadium"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="nextGame">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Rival"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#staffWaige">
+    <rdfs:subPropertyOf rdf:resource="#waige"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#StaffMember"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="relationWithFans">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#President"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="tacticsAb">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Coach"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="biggestWin">
+    <rdfs:domain rdf:resource="#Rival"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="determinationAb">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#StaffMember"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="reboundingAb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Center"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="creativity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Guard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="averageAnnualInvestment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Member"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="typeOfUse">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Property that defines the type of use of the stadium.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Stadium"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="physicalAb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Coach"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="foundationYear">
+    <rdfs:domain rdf:resource="#ClubInformation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="defendingAb">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Coach"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="personality">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="favouriteTeam">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Manager"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="freeThrowsAb">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Percentage_of_free_throws.</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Player"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="threePoints">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Guard"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="numberOfPostMoves">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Center"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="favouritePlay">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Defines the favourite system of the manager.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Manager"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="dribling">
+    <rdfs:domain rdf:resource="#Forward"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="playerWaige">
+    <rdfs:domain rdf:resource="#Player"/>
+    <rdfs:subPropertyOf rdf:resource="#waige"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="telephone">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="biggestDefeat">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Rival"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="motivationAb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#StaffMember"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="motAb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Physiotherapist"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="legendPlayers">
+    <rdfs:domain rdf:resource="#ClubInformation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="afm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Αριθμός_φορολογικού_μητρώου</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Employee"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="postDefence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Center"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="guardDef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Guard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="manManagement">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Manager"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="youngManagement">
+    <rdfs:domain rdf:resource="#ManagerU20"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="dateOfBirth">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="percentage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#Member"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Defines the percentage of the team that blongs to the corresponding member.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="potentialScoutingAb">
+    <rdfs:domain rdf:resource="#Scouter"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="totalDefence">
+    <rdfs:domain rdf:resource="#Forward"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:SymmetricProperty rdf:ID="hasRivals">
+    <rdfs:range rdf:resource="#Rival"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="#hasRivals"/>
+    <rdfs:domain rdf:resource="#ClubInformation"/>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:ID="isNamed">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Defines the name of the stadium.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Stadium"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:FunctionalProperty>
+  <rdf:List rdf:ID="setOfEmployees">
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List/>
+        </rdf:rest>
+        <rdf:first>
+          <Member rdf:ID="Member2">
+            <averageAnnualInvestment rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >150000</averageAnnualInvestment>
+            <percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >5.0</percentage>
+            <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >1976-09-09</dateOfBirth>
+            <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >78236</telephone>
+            <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Denis Efeng</name>
+            <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >versatile</personality>
+          </Member>
+        </rdf:first>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <Member rdf:ID="Member1">
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >69874</telephone>
+        <averageAnnualInvestment rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >50000</averageAnnualInvestment>
+        <percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >10.0</percentage>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Mike Morgan</name>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1950-01-15</dateOfBirth>
+      </Member>
+    </rdf:first>
+  </rdf:List>
+  <ClubInformation rdf:ID="Cavaliers">
+    <legendPlayers xml:lang="en">Jabari Parker</legendPlayers>
+    <hasStadium>
+      <Stadium rdf:ID="Stadium2">
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Cavaliers Training Center</isNamed>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5000</capacity>
+        <typeOfUse rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >training</typeOfUse>
+      </Stadium>
+    </hasStadium>
+    <foundationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1970</foundationYear>
+    <legendPlayers xml:lang="en">AL Jefferson</legendPlayers>
+    <hasRivals>
+      <Rival rdf:ID="SanAntonioSpurs">
+        <biggestDefeat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >120-75</biggestDefeat>
+        <nextGame rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2017-01-10</nextGame>
+        <biggestWin rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >150-135</biggestWin>
+      </Rival>
+    </hasRivals>
+    <legendPlayers xml:lang="en">Zydrunas Ilgauskas</legendPlayers>
+    <hasStadium>
+      <Stadium rdf:ID="Stadium1">
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Akron Stadium</isNamed>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40000</capacity>
+        <typeOfUse rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Playing</typeOfUse>
+      </Stadium>
+    </hasStadium>
+    <hasRivals>
+      <Rival rdf:ID="GoldenStateWarriors">
+        <biggestWin rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >119-150</biggestWin>
+        <biggestDefeat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >100-56</biggestDefeat>
+        <nextGame rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2016-12-25</nextGame>
+      </Rival>
+    </hasRivals>
+    <hasName xml:lang="en">Cleveland Cavaliers</hasName>
+  </ClubInformation>
+  <President rdf:ID="President1">
+    <gCommands>
+      <Center rdf:ID="Center1">
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</yearsInTeam>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Chris Andersen</name>
+        <postDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</postDefence>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >45678</telephone>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1985236540</afm>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >crazy</personality>
+        <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >60</twoPoints>
+        <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >4000000.0</playerWaige>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1978-07-07</dateOfBirth>
+        <numberOfPostMoves rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</numberOfPostMoves>
+        <reboundingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >16</reboundingAb>
+        <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >60</freeThrowsAb>
+      </Center>
+    </gCommands>
+    <gCommands>
+      <Center rdf:ID="Center2">
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1489657230</afm>
+        <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >78</twoPoints>
+        <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >85</freeThrowsAb>
+        <numberOfPostMoves rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</numberOfPostMoves>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >78912</telephone>
+        <reboundingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</reboundingAb>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Tristan Thompson</name>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >brave</personality>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1991-03-13</dateOfBirth>
+        <postDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</postDefence>
+        <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >1.5E7</playerWaige>
+      </Center>
+    </gCommands>
+    <gCommands>
+      <Forward rdf:ID="Forward6">
+        <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >12000.0</playerWaige>
+        <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >29</twoPoints>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1999-09-16</dateOfBirth>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</yearsInTeam>
+        <dribling rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</dribling>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >volatile</personality>
+        <totalDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</totalDefence>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1918171416</afm>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >67129</telephone>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Lue Rogers</name>
+        <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >80</freeThrowsAb>
+      </Forward>
+    </gCommands>
+    <gCommands>
+      <Scouter rdf:ID="Scouter2">
+        <staffWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >150000.0</staffWaige>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15987</telephone>
+        <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >17</motivationAb>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Clay Morrow</name>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1918171215</afm>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >volatile</personality>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1950-09-08</dateOfBirth>
+        <potentialScoutingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >18</potentialScoutingAb>
+        <nowStateAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</nowStateAb>
+        <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</disciplineAb>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</yearsInTeam>
+        <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</determinationAb>
+      </Scouter>
+    </gCommands>
+    <gCommands>
+      <Guard rdf:ID="Guard1">
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1234567890</afm>
+        <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >45</twoPoints>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >calm</personality>
+        <creativity rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >13</creativity>
+        <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >2000000.0</playerWaige>
+        <name xml:lang="en">Kay Felder</name>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1995-03-29</dateOfBirth>
+        <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >76</freeThrowsAb>
+        <threePoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >30</threePoints>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15978</telephone>
+        <guardDef rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</guardDef>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</yearsInTeam>
+      </Guard>
+    </gCommands>
+    <gCommands>
+      <Center rdf:ID="Center3">
+        <numberOfPostMoves rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</numberOfPostMoves>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >calm</personality>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Keith Loperton</name>
+        <captainU20>
+          <Under20 rdf:ID="Under201">
+            <playsYoungGuard>
+              <Guard rdf:ID="Guard5">
+                <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >78236</telephone>
+                <threePoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >29</threePoints>
+                <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1</yearsInTeam>
+                <creativity rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >12</creativity>
+                <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Dwane Erdon</name>
+                <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1215141865</afm>
+                <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >50</twoPoints>
+                <guardDef rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >11</guardDef>
+                <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                >1998-01-14</dateOfBirth>
+                <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >67</freeThrowsAb>
+                <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                >95000.0</playerWaige>
+              </Guard>
+            </playsYoungGuard>
+            <playsYoungForward rdf:resource="#Forward6"/>
+            <playsFirstCenter rdf:resource="#Center3"/>
+            <captainU20 rdf:resource="#Guard5"/>
+            <hasYoungInter rdf:resource="#Center3"/>
+            <hasYoungInter rdf:resource="#Forward6"/>
+            <playsYoungCenter rdf:resource="#Center3"/>
+          </Under20>
+        </captainU20>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</yearsInTeam>
+        <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >10000.0</playerWaige>
+        <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >35</freeThrowsAb>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1918171213</afm>
+        <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >35</twoPoints>
+        <postDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</postDefence>
+        <reboundingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</reboundingAb>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1997-08-17</dateOfBirth>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >65987</telephone>
+      </Center>
+    </gCommands>
+    <gCommands>
+      <Scouter rdf:ID="Scouter3">
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >48239</telephone>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1987-08-17</dateOfBirth>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >568947025</afm>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >crazy</personality>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</yearsInTeam>
+        <staffWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >90000.0</staffWaige>
+        <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</motivationAb>
+        <nowStateAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</nowStateAb>
+        <potentialScoutingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</potentialScoutingAb>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Smoush Polard</name>
+        <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >17</determinationAb>
+        <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >19</disciplineAb>
+      </Scouter>
+    </gCommands>
+    <gCommands>
+      <Physiotherapist rdf:ID="Physiotherapist1">
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</yearsInTeam>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1971-04-09</dateOfBirth>
+        <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</determinationAb>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Seth Williams</name>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >58249</telephone>
+        <staffWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >120000.0</staffWaige>
+        <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</motivationAb>
+        <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</disciplineAb>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >calm</personality>
+        <physiotherapyAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</physiotherapyAb>
+        <motAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</motAb>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1517141313</afm>
+      </Physiotherapist>
+    </gCommands>
+    <relationWithFans rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >excellent</relationWithFans>
+    <gCommands>
+      <Trainer rdf:ID="Trainer2">
+        <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >13</motivationAb>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</yearsInTeam>
+        <strongDomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >technical</strongDomain>
+        <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</disciplineAb>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >58796</telephone>
+        <physicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</physicalAb>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1963-07-16</dateOfBirth>
+        <staffWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >80000.0</staffWaige>
+        <tacticsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</tacticsAb>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Lary Freyman</name>
+        <technicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >19</technicalAb>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >energetic</personality>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1012121264</afm>
+        <defendingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</defendingAb>
+        <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >17</determinationAb>
+      </Trainer>
+    </gCommands>
+    <gCommands>
+      <Scouter rdf:ID="Scouter1">
+        <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >14</motivationAb>
+        <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</determinationAb>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >patient</personality>
+        <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</disciplineAb>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Lou Williams</name>
+        <nowStateAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >19</nowStateAb>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1990-11-15</dateOfBirth>
+        <staffWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >140000.0</staffWaige>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1212121212</afm>
+        <potentialScoutingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</potentialScoutingAb>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >61328</telephone>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</yearsInTeam>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1983-12-27</dateOfBirth>
+      </Scouter>
+    </gCommands>
+    <gCommands>
+      <Guard rdf:ID="Guard2">
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</yearsInTeam>
+        <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >80</twoPoints>
+        <threePoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</threePoints>
+        <guardDef rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >11</guardDef>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1324657980</afm>
+        <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >80</freeThrowsAb>
+        <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >1.8E7</playerWaige>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1993-03-23</dateOfBirth>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >volatile</personality>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >45612</telephone>
+        <captainFirst>
+          <MainSquad rdf:ID="MainSquad1">
+            <playsFirstCenter rdf:resource="#Center1"/>
+            <playsFirstGuard rdf:resource="#Guard1"/>
+            <hasManInternational>
+              <Forward rdf:ID="Forward1">
+                <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >78452</telephone>
+                <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                >3.0E7</playerWaige>
+                <captainFirst rdf:resource="#MainSquad1"/>
+                <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >calm</personality>
+                <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                >1984-12-30</dateOfBirth>
+                <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1597534560</afm>
+                <totalDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >20</totalDefence>
+                <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >80</freeThrowsAb>
+                <dribling rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >20</dribling>
+                <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >10</yearsInTeam>
+                <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >70</twoPoints>
+                <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Lebron James</name>
+              </Forward>
+            </hasManInternational>
+            <playsFirstForward>
+              <Forward rdf:ID="Forward4">
+                <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Channing Frye</name>
+                <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >3</yearsInTeam>
+                <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1987456320</afm>
+                <totalDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >18</totalDefence>
+                <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >45</twoPoints>
+                <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >cool</personality>
+                <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >56412</telephone>
+                <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                >4000000.0</playerWaige>
+                <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >45</freeThrowsAb>
+                <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                >1983-05-17</dateOfBirth>
+                <dribling rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >10</dribling>
+              </Forward>
+            </playsFirstForward>
+            <playsFirstForward rdf:resource="#Forward1"/>
+            <playsFirstForward>
+              <Forward rdf:ID="Forward3">
+                <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >45</twoPoints>
+                <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                >4000000.0</playerWaige>
+                <managerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                >500000.0</managerWaige>
+                <physicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >15</physicalAb>
+                <favouriteTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Brooklyn Nets</favouriteTeam>
+                <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >13</determinationAb>
+                <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >calm</personality>
+                <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >45628</telephone>
+                <youngManagement rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >18</youngManagement>
+                <totalDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >20</totalDefence>
+                <tacticsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >12</tacticsAb>
+                <favouritePlay rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >pick and roll</favouritePlay>
+                <ycoaches rdf:resource="#Under201"/>
+                <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >4</yearsInTeam>
+                <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                >1980-06-21</dateOfBirth>
+                <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1973468250</afm>
+                <defendingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >14</defendingAb>
+                <technicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >12</technicalAb>
+                <manManagement rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >13</manManagement>
+                <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Richard Jefferson</name>
+                <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >78</freeThrowsAb>
+                <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >16</motivationAb>
+                <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >15</disciplineAb>
+                <dribling rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >18</dribling>
+              </Forward>
+            </playsFirstForward>
+            <playsFirstCenter rdf:resource="#Center2"/>
+            <hasManInternational>
+              <Guard rdf:ID="Guard3">
+                <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >50</freeThrowsAb>
+                <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >calm</personality>
+                <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >2</yearsInTeam>
+                <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                >9000000.0</playerWaige>
+                <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >65</twoPoints>
+                <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                >1990-06-26</dateOfBirth>
+                <creativity rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >15</creativity>
+                <threePoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >38</threePoints>
+                <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >2135468790</afm>
+                <name xml:lang="en">Iman Shumpert</name>
+                <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >78912</telephone>
+                <guardDef rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >18</guardDef>
+              </Guard>
+            </hasManInternational>
+            <captainFirst rdf:resource="#Forward1"/>
+            <playsFirstCenter rdf:resource="#Center3"/>
+            <playsFirstGuard>
+              <Guard rdf:ID="Guard4">
+                <guardDef rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >15</guardDef>
+                <threePoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >25</threePoints>
+                <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                >1985-09-09</dateOfBirth>
+                <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1472583690</afm>
+                <creativity rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >12</creativity>
+                <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >49</twoPoints>
+                <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >90</freeThrowsAb>
+                <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >J.R.Smith</name>
+                <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1</yearsInTeam>
+                <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                >1.0E7</playerWaige>
+                <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >78949</telephone>
+                <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >crazy</personality>
+              </Guard>
+            </playsFirstGuard>
+            <playsFirstForward>
+              <Forward rdf:ID="Forward5">
+                <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >45</twoPoints>
+                <totalDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >13</totalDefence>
+                <dribling rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >10</dribling>
+                <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Mo Williams</name>
+                <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                >1500000.0</playerWaige>
+                <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >132654987</afm>
+                <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >4</yearsInTeam>
+                <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >69812</telephone>
+                <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >brave</personality>
+                <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >80</freeThrowsAb>
+                <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                >1982-12-19</dateOfBirth>
+              </Forward>
+            </playsFirstForward>
+            <hasInternational rdf:resource="#Center3"/>
+            <playsFirstGuard rdf:resource="#Guard3"/>
+            <playsFirstGuard rdf:resource="#Guard2"/>
+            <playsYoungCenter rdf:resource="#Center3"/>
+            <playsFirstForward>
+              <Forward rdf:ID="Forward2">
+                <totalDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >15</totalDefence>
+                <dribling rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >18</dribling>
+                <playerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                >1.5E7</playerWaige>
+                <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >3</yearsInTeam>
+                <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                >1988-09-07</dateOfBirth>
+                <freeThrowsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >78</freeThrowsAb>
+                <twoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >56</twoPoints>
+                <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >cool</personality>
+                <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Kevin Love</name>
+                <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1237894560</afm>
+                <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >25698</telephone>
+              </Forward>
+            </playsFirstForward>
+          </MainSquad>
+        </captainFirst>
+        <name xml:lang="en">Kyrie Irving</name>
+        <creativity rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >18</creativity>
+      </Guard>
+    </gCommands>
+    <gCommands>
+      <Physiotherapist rdf:ID="Physiotherapist2">
+        <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</motivationAb>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Keith Dremond</name>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1988-08-13</dateOfBirth>
+        <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</determinationAb>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >48625</telephone>
+        <staffWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >900000.0</staffWaige>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</yearsInTeam>
+        <motAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</motAb>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1717171717</afm>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >energetic</personality>
+        <physiotherapyAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</physiotherapyAb>
+        <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</disciplineAb>
+      </Physiotherapist>
+    </gCommands>
+    <gCommands>
+      <Trainer rdf:ID="Trainer3">
+        <tacticsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</tacticsAb>
+        <staffWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >90000.0</staffWaige>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</yearsInTeam>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >98715</telephone>
+        <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >14</disciplineAb>
+        <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >19</motivationAb>
+        <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</determinationAb>
+        <defendingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</defendingAb>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >James Dersity</name>
+        <strongDomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >defending</strongDomain>
+        <technicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >14</technicalAb>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >happy</personality>
+        <physicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</physicalAb>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1972-05-15</dateOfBirth>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1818371519</afm>
+      </Trainer>
+    </gCommands>
+    <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >1955-09-15</dateOfBirth>
+    <gCommands rdf:resource="#Member2"/>
+    <gCommands rdf:resource="#Guard3"/>
+    <gCommands>
+      <Trainer rdf:ID="Trainer1">
+        <staffWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >50000.0</staffWaige>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1056191814</afm>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Raz MIchalzyk</name>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1960-04-20</dateOfBirth>
+        <strongDomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >tactics</strongDomain>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</yearsInTeam>
+        <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</disciplineAb>
+        <defendingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</defendingAb>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >48236</telephone>
+        <technicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</technicalAb>
+        <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</motivationAb>
+        <tacticsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >16</tacticsAb>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >patient</personality>
+        <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</determinationAb>
+        <physicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</physicalAb>
+      </Trainer>
+    </gCommands>
+    <gCommands rdf:resource="#Member1"/>
+    <gCommands rdf:resource="#Forward1"/>
+    <gCommands rdf:resource="#Guard4"/>
+    <gCommands>
+      <Member rdf:ID="Member3">
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1950-02-13</dateOfBirth>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Jason Aldridge</name>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >calm</personality>
+        <averageAnnualInvestment rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8900000</averageAnnualInvestment>
+        <percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >20.0</percentage>
+      </Member>
+    </gCommands>
+    <gCommands rdf:resource="#Forward2"/>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Wes Brown</name>
+    <gCommands rdf:resource="#Guard5"/>
+    <gCommands>
+      <Member rdf:ID="Member4">
+        <percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >12.0</percentage>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1944-10-04</dateOfBirth>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Spyros Posrikoglou</name>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >45678</telephone>
+        <averageAnnualInvestment rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5000000</averageAnnualInvestment>
+      </Member>
+    </gCommands>
+    <gCommands rdf:resource="#Forward3"/>
+    <gCommands>
+      <Member rdf:ID="Member5">
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >45620</telephone>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >volatile</personality>
+        <averageAnnualInvestment rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10000000</averageAnnualInvestment>
+        <percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >15.0</percentage>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1978-10-30</dateOfBirth>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Victor Dempsey</name>
+      </Member>
+    </gCommands>
+    <gCommands rdf:resource="#Forward4"/>
+    <gCommands rdf:resource="#Forward5"/>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >85247</telephone>
+    <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >fearless</personality>
+    <gCommands>
+      <ManagerFirstTeam rdf:ID="ManagerFirstTeam1">
+        <tacticsAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</tacticsAb>
+        <physicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >13</physicalAb>
+        <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</motivationAb>
+        <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1000001254</afm>
+        <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >cool</personality>
+        <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >18</disciplineAb>
+        <manManagement rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >16</manManagement>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Tyrron Lue</name>
+        <technicalAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</technicalAb>
+        <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1970-09-17</dateOfBirth>
+        <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >18</determinationAb>
+        <defendingAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >14</defendingAb>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >45632</telephone>
+        <fcoaches rdf:resource="#MainSquad1"/>
+        <favouriteTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Los Angeles Lakers</favouriteTeam>
+        <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</yearsInTeam>
+        <managerWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >4000000.0</managerWaige>
+        <favouritePlay rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >pick and pop</favouritePlay>
+      </ManagerFirstTeam>
+    </gCommands>
+  </President>
+  <Physiotherapist rdf:ID="Physiotherapist3">
+    <afm rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1879215631</afm>
+    <physiotherapyAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >16</physiotherapyAb>
+    <determinationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</determinationAb>
+    <dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2017-01-12</dateOfBirth>
+    <personality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >voaltile</personality>
+    <disciplineAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >15</disciplineAb>
+    <motivationAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</motivationAb>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >37891</telephone>
+    <motAb rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >20</motAb>
+    <staffWaige rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >150000.0</staffWaige>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Willy Johnson</name>
+    <yearsInTeam rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</yearsInTeam>
+  </Physiotherapist>
+  <Rival rdf:ID="Boston_Celtics">
+    <nextGame rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2017-01-29</nextGame>
+    <biggestWin rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >120-90</biggestWin>
+    <biggestDefeat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >136-100</biggestDefeat>
+  </Rival>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
